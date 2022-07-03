@@ -16,8 +16,7 @@ app.get('/' , function(req , res) {
   let d = new Date();
   let option = {weekday:'long',month:'long',day:'numeric'}
   let date = d.toLocaleString('en-US' , option)
-console.log(date);
-  res.render('list' , {hey:itemsList},{title1:date});
+  res.render('list' , {hey:itemsList},{itemList:date});
 });
 
 app.post('/' , function(req , res) {

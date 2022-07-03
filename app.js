@@ -13,7 +13,11 @@ app.listen(4000 , function() {
 });
 
 app.get('/' , function(req , res) {
-  res.render('list' , {hey:itemsList});
+  let d = new Date();
+  let option = {weekday:'long',month:'long',day:'numeric'}
+  let date = d.toLocaleString('en-US' , option)
+console.log(date);
+  res.render('list' , {hey:itemsList},{title1:date});
 });
 
 app.post('/' , function(req , res) {

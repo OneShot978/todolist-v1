@@ -5,16 +5,11 @@
     <title>TO DO LIST</title>
   </head>
   <body>
-    <h1>Your Do List </h1>
+    <h1>Your Do List <%= title1 %></h1>
     <ul>
       <% for (var i = 0; i < hey.length; i++){ %>
         <li> <%= hey[i] %></li>
-
       <% } %>
-
-
-
-
     </ul>
     <form action="/" method="post">
       <input type="text" name="toDoListItem" placeholder="get your item">
